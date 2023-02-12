@@ -1,32 +1,34 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
-function App() {
-  const [count, setCount] = useState(0)
+import { marked } from 'marked';
+import DOMPurify from 'dompurify';
+
+import { defaultMarkdown } from './config/defaultMarkdown';
+import markedOptions from './config/markedOptions';
+import './style.css'
+
+export const App = () => {
+  const [markdown, setMarkdown] = useState(defaultMarkdown);
+
+  const onChangeHandler = (event: React.FormEvent<HTMLTextAreaElement>) => {
+    setMarkdown(event.currentTarget.value);
+  };
+
+  const onExportHandler = () => console.log('Exportar Markdown')
+
+  const onImportHandler = () => console.log('Importar Markdown')
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <p>image 1</p>
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <p>image 2</p>
-        </a>
+    <>
+      <header id="header">
+        <h1>Markdown Previewer</h1>
+        <button id="export-button" onClick={onExportHandler}>Export</button>
+        <button id="import-button" onClick={onImportHandler}>Import</button>
+      </header>
+      <div id="main-container">
+        <textarea id="editor" onChange={onChangeHandler} defaultValue={markdown} />
+        <div id="preview" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(marked.parse(markdown, markedOptions)) }}></div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    </>
   )
-}
-
-export default App
+};

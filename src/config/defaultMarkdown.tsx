@@ -1,33 +1,33 @@
-export const defaultMarkdown = `# Conheça meu SPA "Markdown Previewer"!
+export const defaultMarkdown = `# This is my SPA "Markdown Previewer"!
 
-Você já ouviu falar do Markdown? É uma linguagem de marcação de texto que permite criar documentos com formatação e organização de forma simples e fácil. E agora, eu desenvolvi um SPA chamado "Markdown Previewer" para que você possa experimentar tudo isso!
+Have you ever heard of Markdown? It's a text markup language that allows you to create documents with formatting and organization in a simple and easy way. And now, I've developed an SPA called "Markdown Previewer" so you can try it all out!
 
-Com o meu SPA, você pode escrever o seu texto em Markdown e ver uma prévia do resultado final em tempo real. Além disso, também é possível fazer edições no texto e ver as alterações instantaneamente. Tudo isso em uma interface simples e intuitiva, sem precisar instalar nada!
+With my SPA, you can write your text in Markdown and see a preview of the final result in real-time. Moreover, you can make edits to the text and see the changes instantly. All of this in a simple and intuitive interface, without needing to install anything!
 
-O "Markdown Previewer" é perfeito para quem quer criar documentos mais elaborados, como relatórios, artigos, apresentações e até mesmo páginas da web. E o melhor de tudo, é completamente gratuito!
+The "Markdown Previewer" is perfect for those who want to create more elaborate documents, such as reports, articles, presentations, and even web pages. And the best part is, it's completely free!
 
-Abaixo tem um guia rápido que apresenta todos os elementos suportados:
+Below is a quick guide that presents all the supported elements:
 
-## Títulos
+## Headings
 
-# Título 1
-## Título 2
-### Título 3
-#### Título 4
-##### Título 5
-###### Título 6
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
 
-## Ênfase
+## Emphasis
 
-**negrito**
-__negrito__
-*itálico*
-_itálico_
-~~riscado~~
+**bold**
+__bold__
+*italic*
+_italic_
+~~strikethrough~~
 
-## Listas
+## Lists
 
-### Não ordenada
+### Unordered
 
 - Item 1
 - Item 2
@@ -35,7 +35,7 @@ _itálico_
   - Subitem 2.2
 - Item 3
 
-### Ordenada
+### Ordered
 
 1. Item 1
 2. Item 2
@@ -45,60 +45,37 @@ _itálico_
 
 ## Links
 
-[texto do link](https://www.github.com)
+[link text](https://www.github.com)
 
-## Imagens
+## Images
 
-![texto alternativo](https://picsum.photos/350)
+![alt text](https://picsum.photos/350)
 
-## Tabelas
+## Tables
 
-| Coluna 1 | Coluna 2 | Coluna 3 |
+| Column 1 | Column 2 | Column 3 |
 | -------- | -------- | -------- |
-| Linha 1, Coluna 1 | Linha 1, Coluna 2 | Linha 1, Coluna 3 |
-| Linha 2, Coluna 1 | Linha 2, Coluna 2 | Linha 2, Coluna 3 |
+| Row 1, Column 1 | Row 1, Column 2 | Row 1, Column 3 |
+| Row 2, Column 1 | Row 2, Column 2 | Row 2, Column 3 |
 
-## Citações
+## Blockquotes
 
-> Esta é uma citação.
+> This is a blockquote.
 
-## Código
+## Code
 
 ### Inline
 
-\`código inline\`
-
-### Bloco de código
-
-\`\`\`javascript
-function exemplo() {
-  console.log('Exemplo');
-}
-\`\`\`
-## Tarefas
-
-- [x] Tarefa concluída
-- [ ] Tarefa não concluída`
-
-export const defaultMarkdown2: string = `# Header 1
-
-## Header 2
-
-This is an [example link](http://example.com/).
-
 \`inline code\`
 
-\`\`\`js
-function teste () {
-  const vini = "string";
+### Code Block
+
+\`\`\`javascript
+function exemple() {
+  console.log('Exemple');
 }
 \`\`\`
+## Tasks
 
-- List item 1
-- List item 2
-
-> blockquote
-
-![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/1920px-Markdown-mark.svg.png "Image Title")
-
-**bolded text**`
+- [x] Completed Task
+- [ ] Incompleted Task`
